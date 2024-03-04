@@ -30,10 +30,10 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v3
       - name: create titlepage
-          using: 'docker'
-          image: 'flungo/inkscape'
-          args:
-            - titelseite.svg --export-filename titelseite.pdf
+        using: 'docker'
+        image: 'flungo/inkscape'
+        args:
+          - titelseite.svg --export-filename titelseite.pdf
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
