@@ -1,6 +1,9 @@
 # action.yml
 name: 'Inkscape svg to pdf'
 description: 'Transform an svg file to pdf'
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 inputs:
   svg-file:  # id of input
     description: 'Who to greet'
