@@ -30,7 +30,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v3
       - name: install dep
-        run: apt install -y inkscape
+        run: sudo apt install -y inkscape
       - name: create titlepage
         run: inkscape titelseite.svg --export-filename titelseite.pdf
       - name: Compile LaTeX document
