@@ -30,9 +30,8 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v3
       - name: create titlepage
-        run:
-          apt install -y inkscape
-          inkscape titelseite.svg --export-filename titelseite.pdf
+        run: apt install -y inkscape
+        run: inkscape titelseite.svg --export-filename titelseite.pdf
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
