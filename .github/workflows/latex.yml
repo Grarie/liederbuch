@@ -30,9 +30,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v3
       - name: create titlepage
-        uses: flungo/inkscape
-        args:
-          - titelseite.svg --export-filename titelseite.pdf
+        uses: ./.github/workflows/inkscape.yml
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:

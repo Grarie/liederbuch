@@ -1,0 +1,18 @@
+# action.yml
+name: 'Inkscape svg to pdf'
+description: 'Transform an svg file to pdf'
+inputs:
+  svg-file:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'liederbuch.svg'
+outputs:
+  pdf-file: # id of output
+#    description: 'The time '
+  required: true
+  default: 'liederbuch.pdf'
+runs:
+  using: 'docker'
+  image: 'kasmweb/inkscape'
+  args:
+    - ${{ inputs.svg-file }} --export-filename ${{ outputs.pdf-file }}
