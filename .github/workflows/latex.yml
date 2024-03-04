@@ -30,7 +30,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v3
       - name: create titlepage
-        using: 'docker'
+        uses: 'docker'
         image: 'flungo/inkscape'
         args:
           - titelseite.svg --export-filename titelseite.pdf
